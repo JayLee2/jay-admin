@@ -1,18 +1,15 @@
 {
-    "compilerOptions": {
-        "esModuleInterop":true,
-        "jsx": "react",
-        "outDir": "./",
-    }, 
-    "include": [
-        "src",
-        ".*.js",
-        "commitlint.config.js",
-        "webpack.config.js"
-    ],
-    "exclude": [
-        "node_modules",
-        "dist",
-    ],
-    
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "jsx": "react",
+    "outDir": "./",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@components/*": ["./src/components/*"]
+    }
+  },
+  "include": ["src", ".*.js", "commitlint.config.js", "webpack.config.js"],
+  "exclude": ["node_modules", "dist"]
 }
